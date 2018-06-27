@@ -1,5 +1,5 @@
 body {
-	background-image: url("back_pattern.png");
+	background-image: url("back_patter.png")
 }
 
 h1 {
@@ -7,8 +7,14 @@ h1 {
     text-align: center;
 }
 
-.input {
+#input {
     width: 75%;
     margin: 0 auto;
     text-align: center;
+}
+
+#output {
+	display: none;
+	text-align: center;
+
 }
