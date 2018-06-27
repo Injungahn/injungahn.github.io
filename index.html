@@ -7,7 +7,7 @@
 	<body>
 		<h1>Youtube subtitle generator</h1>
 
-	<div class = "input" id = "inp">
+	<div id = "input">
 		Youtube Video:<br>
 		<input type="url" name="youtube" placeholder="insert youtube link:">
 		<br><br>
@@ -27,12 +27,12 @@
 	<script>
 	function hideInput()
 	{
-	document.getElementById("inp").style.display = "none";
-	document.getElementById("out").style.display = "block";
+	document.getElementById("input").style.display = "none";
+	document.getElementById("output").style.display = "block";
 	}
 	</script>
 
-	<div class ="video" id = "out">
+	<div id = "output">
 	<button type = "button" onclick ="revealInput()">Translate Another Video</button>
 	</div>
 
@@ -40,8 +40,8 @@
 	<script>
 	function revealInput()
 	{
-	document.getElementById("inp").style.display = "block";
-	document.getElementById("out").style.display = "none";
+	document.getElementById("input").style.display = "block";
+	document.getElementById("output").style.display = "none";
 	}
 	</script>
 
