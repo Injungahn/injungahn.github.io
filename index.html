@@ -7,8 +7,7 @@
 	<body>
 		<h1>Youtube subtitle generator</h1>
 
-	<div class = "input">
-		<form action="/action_page.php">
+	<div class = "input" id = "inp">
 		Youtube Video:<br>
 		<input type="url" name="youtube" placeholder="insert youtube link:">
 		<br><br>
@@ -21,13 +20,30 @@
 	        <option value="Filipino">Filipino</option>
 	        <option value="French">French</option>
 	        <option value="German">German</option>
-	    
-		</form>
+	    </select>
+	    <br>
+	<button type = "button" onclick ="hideInput()">Go!</button>
 	</div>
-	<button>Buttons aren't toys!</button>
-	
+	<script>
+	function hideInput()
+	{
+	document.getElementById("inp").style.display = "none";
+	document.getElementById("out").style.display = "block";
+	}
+	</script>
+
+	<div class ="video" id = "out">
+	<button type = "button" onclick ="revealInput()">Translate Another Video</button>
+	</div>
 
 
+	<script>
+	function revealInput()
+	{
+	document.getElementById("inp").style.display = "block";
+	document.getElementById("out").style.display = "none";
+	}
+	</script>
 
 	</body>
 </html>
