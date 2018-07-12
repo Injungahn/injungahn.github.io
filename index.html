@@ -26,7 +26,7 @@
 			}
 
 			function revealInput(){
-				document.getElementById("input").style.display = "block";
+				document.getElementById("input").style.display = "inline-block";
 				document.getElementById("output").style.display = "none";
 			}
 
@@ -72,12 +72,16 @@
 
 		<div id = "output">		
 			<iframe width="560" id="vid" height="315" src="https://www.youtube.com/embed/9vcYBmeBliI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-			<br>
 
-			<button type = "button" onclick ="revealInput()">Translate Another Video</button>
+			<textarea rows="20" cols="50" id="sub">
+				Where the subtitles will go.
+			</textarea>
+
+
+			<button type = "button" id="newvid" text-align="center" onclick ="revealInput()">Translate Another Video</button>
 
 		</div>
 
 	</body>
-	
+
 </html>

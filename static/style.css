@@ -21,6 +21,21 @@ p.text{
 
 #output {
 	display: none;
-	text-align: center;
 
+}
+
+#vid {
+    float: left;
+    width:50%;
+
+}
+
+#sub {	
+    float: right;
+    width: 49%;
+}
+
+#newvid
+{
+	margin-bottom:10px;	 
 }
