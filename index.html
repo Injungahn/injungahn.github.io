@@ -9,7 +9,7 @@
 	<body>
 
 		<script>
-			function hideInput(){
+			function hideInput() {
 				var url = new String(document.getElementById("link").value);
 				var urlfh = url.slice(0,23);
 				var urllh = url.slice(32)
@@ -51,33 +51,33 @@
 		<div id = "input">
 			<p class="text">Youtube Video:</p>
 
-			<input type="url" name="youtube" id="link" placeholder="insert youtube link:">
+				<input type="url" name="youtube" id="link" placeholder="insert youtube link:">
 
-			<br>
-			<br>
-			<select>
-				<option value="Select..." selected="">Select</option>
-		        <option value="Arabic">Arabic</option>
-		        <option value="Chinese">Chinese</option>
-		        <option value="Dutch">Dutch</option>
-		        <option value="English">English</option>
-		        <option value="Filipino">Filipino</option>
-		        <option value="French">French</option>
-		        <option value="German">German</option>
-		    </select>
-		    <br>
-			<button type = "button" onclick ="hideInput()">Go!</button>
-			<button type="button" onclick="loadDoc()">Request data</button>
+				<br> <br>
+				<select>
+					<option value="Select..." selected="">Select</option>
+			        <option value="Arabic">Arabic</option>
+			        <option value="Chinese">Chinese</option>
+			        <option value="Dutch">Dutch</option>
+			        <option value="English">English</option>
+			        <option value="Filipino">Filipino</option>
+			        <option value="French">French</option>
+			        <option value="German">German</option>
+			    </select>
+			    <br>
+				<button type = "button" onclick ="hideInput()">Go!</button>
+				<button type="button" onclick="loadDoc()">Request data</button>
 			<p id="demo"></p>
 		</div> <!-- input -->
 
 		<div id = "output">		
-			<br>
 			<iframe width="560" id="vid" height="315" src="https://www.youtube.com/embed/9vcYBmeBliI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-			<button type = "button" onclick ="revealInput()">Translate Another Video
-			</button>
+			<br>
+
+			<button type = "button" onclick ="revealInput()">Translate Another Video</button>
 
 		</div>
 
 	</body>
+	
 </html>
