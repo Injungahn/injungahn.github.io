@@ -26,13 +26,15 @@ p.text{
 
 #vid {
     float: left;
-    width:50%;
+    width:40%;
+    margin-left: 120px;
 
 }
 
 #sub {	
     float: right;
-    width: 49%;
+    width: 40%;
+    margin-right: 120px;
 }
 
 #newvid
