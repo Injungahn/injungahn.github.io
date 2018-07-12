@@ -20,17 +20,18 @@
 			}
 
 			function loadDoc(){
-			  var xhttp = new XMLHttpRequest();
-			  xhttp.onreadystatechange = function() {
-			    if (this.readyState == 4 && this.status == 200) {
-			      document.getElementById("demo").innerHTML = this.responseText;
-			    }
-					else{
-						console.log(this.status);
-					}
-			  };
-			  xhttp.open("GET", "demo_get.asp", true);
-			  xhttp.send();
+				var xhr = new XMLHttpRequest();
+				xhr.open('GET', "https://ipinfo.io/json", true);
+				xhr.send();
+
+				xhr.addEventListener("readystatechange", processRequest, false);
+			}
+
+			function processRequest(e) {
+		    if (xhr.readyState == 4 && xhr.status == 200) {
+		        var response = JSON.parse(xhr.responseText);
+		        alert(response.ip);
+    		}
 			}
 		</script>
 
