@@ -7,6 +7,30 @@
 	</head>
 
 	<body>
+
+		<script>
+			function hideInput(){
+				document.getElementById("input").style.display = "none";
+				document.getElementById("output").style.display = "block";
+			}
+
+			function revealInput(){
+				document.getElementById("input").style.display = "block";
+				document.getElementById("output").style.display = "none";
+			}
+
+			function loadDoc(){
+			  var xhttp = new XMLHttpRequest();
+			  xhttp.onreadystatechange = function() {
+			    if (this.readyState == 4 && this.status == 200) {
+			      document.getElementById("demo").innerHTML = this.responseText;
+			    }
+			  };
+			  xhttp.open("GET", "demo_get.asp", true);
+			  xhttp.send();
+			}
+		</script>
+
 		<h1 class="heading">Youtube subtitle generator</h1>
 
 		<div id = "input">
@@ -27,16 +51,8 @@
 		        <option value="German">German</option>
 		    </select>
 		    <br>
-			<button type = "button" onclick ="hideInput()">Go!
-			</button>
+			<button type = "button" onclick ="hideInput()">Go!</button>
 		</div>
-		<script>
-			function hideInput()
-			{
-			document.getElementById("input").style.display = "none";
-			document.getElementById("output").style.display = "block";
-			}
-		</script>
 
 		<div id = "output">
 			<iframe width="420" height="315"
@@ -44,19 +60,10 @@
 			</iframe>
 
 
-			<button type = "button" onclick ="revealInput()">Translate Another Video
-			</button>
+			<button type = "button" onclick ="revealInput()">Translate Another Video</button>
+			<button type="button" onclick="loadDoc()">Request data</button>
 
 		</div>
-
-
-	<script>
-	function revealInput()
-	{
-		document.getElementById("input").style.display = "block";
-		document.getElementById("output").style.display = "none";
-	}
-	</script>
 
 	</body>
 </html>
