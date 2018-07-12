@@ -10,6 +10,17 @@
 
 		<script>
 			function hideInput(){
+				var url = new String(document.getElementById("link").value);
+				var urlfh = url.slice(0,23);
+				var urllh = url.slice(32)
+				url = urlfh + "/embed/"+ urllh;
+
+				console.log(urlfh);
+				console.log(urllh);
+				console.log(url);
+
+				document.getElementById("vid").setAttribute("src", url);
+
 				document.getElementById("input").style.display = "none";
 				document.getElementById("output").style.display = "block";
 			}
@@ -40,7 +51,7 @@
 		<div id = "input">
 			<p class="text">Youtube Video:</p>
 
-			<input type="url" name="youtube" placeholder="insert youtube link:">
+			<input type="url" name="youtube" id="link" placeholder="insert youtube link:">
 
 			<br>
 			<br>
@@ -60,11 +71,13 @@
 			<p id="demo"></p>
 		</div> <!-- input -->
 
-		<div id = "output">
-			<iframe width="420" height="315" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
-			<button type = "button" onclick ="revealInput()">Translate Another Video</button>
+		<div id = "output">		
+			<br>
+			<iframe width="560" id="vid" height="315" src="https://www.youtube.com/embed/9vcYBmeBliI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+			<button type = "button" onclick ="revealInput()">Translate Another Video
+			</button>
 
-		</div> <!-- output -->
+		</div>
 
 	</body>
 </html>
